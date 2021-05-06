@@ -25,9 +25,7 @@ df[['discount%']].plot.box()
 df[['weekday']].plot.box()
 df[['total_items']].plot.box()
 
-# %%
+# %% Diagrama de dispersion
 new = df.filter(['order'], axis=1)
 new2 = new.groupby(['order']).size().reset_index(name="count")
 df.plot.scatter(x='count', y=['order'])
-# %%
-df.plot.scatter(x="")
